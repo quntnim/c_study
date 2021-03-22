@@ -1,5 +1,6 @@
 #include <stdio.h>
 #pragma warning (disable : 4996)
+
 int main()
 {
 	int xo = 0;
@@ -17,7 +18,7 @@ int main()
 		printf("%f\n", d2);
 		printf("%e\n", d2);
 		printf("%E\n", d2);
-		printf("%g\n", d2); 
+		printf("%g\n", d2);
 		return 0;
 	}
 	else if (xo == 1)
@@ -41,7 +42,7 @@ int main()
 		int i = 1;
 		while (i < 10)
 		{
-			printf("2 x %d = %d\n",i, 2 * i);
+			printf("2 x %d = %d\n", i, 2 * i);
 			i++;
 		}
 		return 0;
@@ -59,4 +60,40 @@ int main()
 		} while (i <= 10);
 		return 0;
 	}
+	else if (xo == 5)
+	{
+		printf("0을 입력받을때까지 더함\n\n");
+		int a = 0, sum = 0;
+		do
+		{
+			scanf_s("%d", &a);
+			sum += a;
+		} while (a);
+		printf("%d\n", sum);
+		return 0;
+	}
+	else if (xo == 6)
+	{
+		printf("단 입력 : ");
+		int n = 0, dan = 0;
+		scanf_s("%d", &dan);
+		while (n++ < 9)
+			printf("%d x %d = %d\n", dan, n, n * dan);
+		return 0;
+	}
+	else if (xo == 7)
+	{
+		int n = 0, dan = 1;
+		while (dan < 10)
+		{
+			n = 0;
+			printf("==========\n%d단\n==========\n", dan);
+			while (n++ < 9)
+				printf("%d x %d = %d\n", dan, n, n * dan);
+			dan++;
+		}
+		return 0;
+	}
+	else
+		printf("잘못된 숫자 !\n");
 }
